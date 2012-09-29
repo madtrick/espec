@@ -41,7 +41,7 @@ run(Mod, ListenerState, ListenerModule) ->
     run_spec(Mod, Spec, ListenerState, ListenerModule).
 
 run_spec(Mod, Spec) ->
-    run_spec(Mod, Spec, espec_console_listener:new(), espec_console_listener).
+    run_spec(Mod, Spec, espec_console_error_listener:new(), espec_console_error_listener).
 
 run_spec(Mod, Spec, ListenerState0, ListenerModule) ->
     ExecutionTree = espec_ast:convert_to_execution_tree(Spec),
